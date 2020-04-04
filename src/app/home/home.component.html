@@ -1,0 +1,18 @@
+<div style="padding: 13px;">
+    <div>Welocme to data!!!!!!!!!!!</div>
+
+    <div *ngIf="products.length === 0">loading....</div>
+
+    <div *ngFor="let product of products" style="margin-top:10px;">
+        <div>
+            <h2>{{product.name}}</h2>
+            <h3>{{product.price}} $/ {{product.quantity}}</h3>
+        </div>
+        <div>
+            <p>
+                {{product.description}}
+            </p>
+            <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
+        </div>
+    </div>
+</div>
